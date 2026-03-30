@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎁 GiftSync AI
 
-## Getting Started
+AI-powered corporate gifting platform that analyzes LinkedIn profiles and suggests personalized gift ideas instantly.
 
-First, run the development server:
+## 🚀 Features
+
+* 🔗 Paste LinkedIn profile URL or text
+* 💡 AI-generated personalized gift recommendations
+* 💰 Budget filtering (min & max)
+* 🌍 Currency selection (USD, INR, EUR)
+* 📊 Smart ranking (Best, Cheapest, Premium)
+* 🛒 Direct purchase links
+* 🎨 Clean light-themed modern UI
+
+## 🛠 Tech Stack
+
+* Next.js (App Router)
+* TypeScript
+* Tailwind CSS
+* Gemini API (Google AI)
+
+## ⚙️ Setup
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/Shaunfernandez7788/GiftSync-AI.git
+cd GiftSync-AI
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Add environment variables:
+   Create `.env.local`:
+
+```
+GEMINI_API_KEY=your_api_key_here
+```
+
+4. Run the app:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 API
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+POST `/api/recommend`
 
-## Learn More
+Request:
 
-To learn more about Next.js, take a look at the following resources:
+```json
+{
+  "profile": "LinkedIn profile text or URL",
+  "currency": "USD",
+  "min": "20",
+  "max": "100"
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Future Improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Real LinkedIn data scraping (via API)
+* Better product integrations (Amazon/Flipkart)
+* Gift images + previews
+* User accounts & saved suggestions
 
-## Deploy on Vercel
+## 👨‍💻 Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Shaun Fernandez
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+⭐ If you like this project, give it a star!
